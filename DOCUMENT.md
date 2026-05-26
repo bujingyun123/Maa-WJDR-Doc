@@ -3,199 +3,125 @@
   <img alt="LOGO" src="imags/logo.png" width="256" height="256" />
 </p>
 
-<div align="center" style="font-size: 30px;font-weight: bold;">游戏伙伴</div>
+<div align="center">
 
+# 游戏伙伴帮助文档
+
+_✨ 基于 MaaFramework 框架开发的界面操作助手工具 ✨_
+
+</div>
 
 ## 现有功能
 
-银行存储、英雄招募、仓库补给、仓库体力、联盟捐献、探险奖励、生命之树、晨曦回礼、训练士兵、联盟互助、任务奖励领取、联盟宝箱、邮件领取、游荡商人、统帅奖励、储值中心、宠物寻宝、宠物技能、采集资源、领主指令、灯塔情报、炼晶实验室、游历补给、雪原商路、体力补给、逐光之旅、角色切换、打开集结、竞技场、巨熊行动。
+银行存储、英雄招募、仓库补给、仓库体力、联盟捐献、探险奖励、生命之树、晨曦回礼、训练士兵、联盟互助、任务奖励领取、联盟宝箱、邮件领取、游荡商人、统帅奖励、储值中心、宠物寻宝、宠物技能、采集资源、领主指令、灯塔情报、炼晶实验室、游历补给、雪原商路、体力补给、逐光之旅、角色切换、打开集结、竞技场、巨熊行动、攻击检测、闲时关闭游戏。
+
+## 文档版本
+
+本文档适用于 `2.0.0` 版本。
+
+## 软件组成
+
+游戏伙伴 `2.0.0` 由 PC 桌面端助手和游戏伙伴 APP 组成。
+
+- PC 桌面端助手：负责连接模拟器、识别游戏界面、执行任务、记录任务状态和日志
+- 游戏伙伴 APP：支持远程查看任务状态、开始或停止任务、下发调度、修改任务配置等操作
 
 
-## 使用环境
+### PC 端使用环境
 
-<h4>推荐使用<font color=#c00000>MuMu模拟器</font></h4>
+- 推荐使用 **MuMu 模拟器**
+- 模拟器分辨率建议设置为手机分辨率，**`720*1280` 或 `1080*1920`** 均可
+- 使用前请先启动模拟器并进入游戏首页
+- 其他模拟器可能存在部分任务不可用的情况，建议自行测试
 
-修改模拟器分辨率为**手机**分辨率，**720*1280**、**1080*1920**均可。
+### PC 端安装与启动
 
-> 其他模拟器可能存在部分任务无法执行，如：联盟捐献。
->
-> 请自行测试。
+1. 解压下载好的 PC 端压缩包
 
-## 安装与更新
-
-### 安装使用
-
-#### 启动软件
-
-解压下载好的压缩包，运行`GamePal.exe`即可。
-
-> 建议将解压后的`GamePal`目录移动至不包含中文字符的目录下，如：`D:\Program Files\GamePal`。
-
-[<font color=#c00000>！！！启动报错！！！看这里</font>](#启动助手报错)
+2. 运行 `GamePal.exe`
 
 
-#### 连接模拟器
+> 建议将程序放在不包含中文字符的目录下，例如 `D:\Program Files\GamePal`
 
-运行软件后，仔细阅读公告后，关闭公告弹窗。点击左上角`连接模拟器`按钮，在连接设备弹窗中点击`一键连接设备`按钮。
+### PC 端连接模拟器
 
-> 注意：在连接前，请先启动模拟器，启动游戏，并确定进入首页！！！
+1. 启动模拟器，打开游戏并进入游戏首页
+3. 启动 `GamePal.exe`
+3. 点击左上角 `连接模拟器`，在连接设备弹窗中点击 `一键连接设备`
+6. 等待连接成功并完成用户识别
 
-[<font color=#c00000>！！！连接设备失败！！！看这里</font>](#连接设备失败)
-### 版本更新
+连接成功后，PC 端会显示当前用户、任务状态和运行日志。若识别用户失败，`2.0.0` 会进行重试；多次失败时，请确认游戏是否停留在首页或可识别页面。
 
-更新软件时，删除软件目录下的`_internal`、`assets`和`GamePal.exe`文件，将压缩包中的对应内容复制到原目录下，最后运行`GamePal.exe`。
+## APP 端使用说明
 
-```text
-GamePal
-├─ _internal // 更新时需要替换的目录
-├─ assets    // 更新时需要替换的目录
-├─ config    // 软件配置文件目录，更新时保留（启动软件后产生）
-├─ log       // 日志文件目录（启动软件后产生）
-├─ user_data // 用户配置文件目录（启动助手后产生）
-│  └─ 888888888.json // 用户ID为888888888的配置文件（连接模拟器成后产生）
-└─ GamePal.exe       // 软件启动程序
-```
+游戏伙伴 APP 用于远程管理 PC 端助手。使用 APP 前，请确保 PC 端助手已正常启动，并且账号已完成连接。
 
-### 任务配置
+#### 查看任务状态
 
-**修改任务配置的正确步骤：**
+在 APP 中进入任务页面后，可以查看当前 PC 端助手的任务运行状态，包括是否在线、当前任务、执行进度。
 
-1. **关闭软件**：确保已经连接模拟器并成功识别到用户账号ID后，关闭软件；
-2. **修改配置**：在软件所在目录的`user_data`文件夹中，找到对应账号ID命名的`.json`文件，用文本编辑器软件（如记事本）打开。`true`为开，`false`为关，**修改后保存文件！**
-3. **启动软件**：保存修改后的配置文件，并重新启动软件。
+#### 开始或停止任务
 
-#### 配置信息
+APP 支持远程开始或停止 PC 端任务。开始任务前，请确认 PC 端已连接模拟器，且游戏处于可执行任务的页面。停止任务后，PC 端会结束当前调度流程。
 
-****
+#### 下发调度
 
-```typescript
-# 游荡商人任务是否启用
-wanderingMerchantEnable = true
-# 游荡商人任务折扣商品列表（可删除内容，删除成对大括号{}即可，如删除整个：{"id": "ExpeditionSkillBook", "name": "史诗远征技能书", "discount_ge_buy": "-25%", }。）
-wanderingMerchantDiscountGoodsList = [
-    {"id": "ExpeditionSkillBook", "name": "史诗远征技能书", "discount_ge_buy": "-25%", },
-    {"id": "CommanderExperience", "name": "统帅经验", "discount_ge_buy": "-25%", }
-]
+APP 可以向 PC 端下发任务调度。下发后，PC 端会按照当前任务规则和优先级执行。若 PC 端离线、模拟器未连接或游戏页面异常，调度可能无法立即执行。
 
-# 灯塔情报任务是否启用
-lighthouseIntelligenceEnable = true
+#### 修改任务配置
 
-# 雪原商路任务是否启用
-snowfieldTradeRouteEnable = true
-# 雪原商路分享列表（可自由增减）
-snowfieldTradeRouteShareList = [
-    # 0<=战力<90,000,000并且货物品质>=5的目标会被分享至“低战专用”的群聊
-    {"targetName": "低战专用", "powerMinNum": "0", "powerMaxNum": "90,000,000", "goodsQuality": 5},
-    {"targetName": "雪原商路", "powerMinNum": "90,000,000", "powerMaxNum": "250,000,000", "goodsQuality": 0},
-    {"targetName": "联盟", "powerMinNum": "250,000,000", "powerMaxNum": "350,000,000", "goodsQuality": 0},
-]
-# 当前用户是否校验货物品质，大于0时进行校验
-snowfieldTradeRouteGoodsQuality = 5
+APP 支持修改任务开关、任务优先级和部分任务参数。修改后建议确认 PC 端已同步最新设置，再开始执行任务。
 
-# 采集资源任务是否启用
-collectResourcesEnable = true
-# 采集资源是否启用联盟资源矿
-collectResourcesUnionMineEnable = true
-# 采集资源设置等级是否启用
-collectResourcesSetLevelEnable = true
-# 采集资源等级（为空时默认为最大等级采集，若需指定等级，改为对应数字即可，如：[6,7,7,7]）
-collectResourcesLevel = [null, null, null, null]
-# 联盟总动员任务是否启用（尚未写完的任务，开启无用！！！）
-unionMobilizationEnable = false
-# 领主指令任务是否启用
-lordCommandEnable = true
-# 炼晶实验室任务是否启用
-crystalRefiningLaboratoryEnable = true
-# 仓库体力任务是否启用
-warehousePhysicalStrengthEnable = true
-# 仓库体力领取时间（提前多久领取，单位分钟，最小值为1）
-warehousePhysicalStrengthCollectionTime = 60
-# 游历补给任务是否启用
-travelSupplyEnable = true
-# 角色切换任务是否启用【使用说明详见“角色切换”】
-roleSwitchEnable = false
-# 角色切换间隔，单位分钟
-roleSwitchInterval = 60
-# 角色切换用户名列表
-roleSwitchNameList = null
-# 逐光之旅任务是否启用
-journeyToTheLightEnable = true
-# 训练士兵是否启用（依次为盾矛射）
-trainSoldiersEnable = [true, true, true]
-# 训练士兵是否优先晋升
-barracksPriorityPromotion = true
-# 打开集结是否启用
-openAssembleEnable = true
-### 【竞技场】
-# 竞技场是否启用
-arenaEnable = true
-# 竞技场执行时间
-arenaExecuteTime = "23:05"
-# 竞技场挑战战力倍数（优先挑战低于阈值战力的目标）
-arenaChallengeMultiple = 0.85
-# 战争学院是否解锁（true时为5爪野兽，false时为4爪野兽）【临时配置，后续版本将会删除】
-warCollegeUnlocked = true
-### 【巨熊行动】
-# 巨熊行动是否启用
-operationGiantBearEnable = false
-# 巨熊行动上一次执行日期（上次开启日期，如：2026-04-04）（为None时，停止执行；活动结束后，自动更新该日期）！！！注意要加英文双引号！！！
-operationGiantBearLastExecuteDate = "2026-04-04"
-# 巨熊行动开启时间（如：21:00，为None时，停止执行）
-operationGiantBearOpenTime = "21:00"
-# 巨熊行动使用宠物技能
-operationGiantBearUsePetSkill = true
-# 巨熊行动前是否召回行军队列
-operationGiantBearBeforeRecallArmy = true
-# 巨熊行动前召回行军队列分钟数，（提前几分钟召回，默认为5分钟）
-operationGiantBearBeforeRecallArmyMinute = 5
-# 巨熊行动是否发起集结
-operationGiantBearInitiateAssemble = true
-# 巨熊行动发起集结编队（1~8），无效值则不发起集结，（请勿设置未解锁的编组和未配置的编组），暂时只支持到8
-operationGiantBearInitiateAssembleFormation = 1
-# 巨熊行动-距离狩猎陷阱单程耗时（单位秒），每次活动首次发车时自动获取，若识别失败则使用配置时间
-operationGiantBearDistanceTrapOneWayTime = 10
-# 巨熊行动是否加入集结
-self.operationGiantBearJoinAssemble = true
-# 巨熊行动加入集结编队（1~7），无效值则不加入集结（请勿设置重复的编组、未解锁的编组和未配置的编组），暂时只支持到7
-# ！！！需要消除编组的气泡！！！  若编组存在气泡，则不出征
-self.operationGiantBearJoinAssembleFormations = [1, 2, 3, 4]
-```
+## 专注模式
 
-#### 角色切换
+专注模式用于减少任务执行期间的干扰，提高当前任务的连续执行稳定性。开启后，建议避免手动操作模拟器。
 
-角色切换**默认为关闭状态**。
+## 版本更新
 
-角色切换使用推荐步骤：
+更新 PC 端时，删除原软件目录，再将新版压缩包中的`GamePal`复制到原目录，最后重新运行 `GamePal.exe`。
 
-1. 开启角色切换任务，然后启动`游戏伙伴`；[<font>修改方式详见任务配置</font>](#任务配置)
-2. 让软件执行一次角色切换任务，此时会根据识别到的角色列表生成`roleSwitchNameList`配置，根据自己需要进行增减即可。
+APP 端已实现在线更新。
 
-> **同一手机号下的角色**配置，只需修改**当前登录的角色**即可。
+## 使用建议
+
+- 首次使用时，建议先执行少量任务，确认模拟器、分辨率和账号识别均正常
+- 任务执行期间尽量不要手动操作模拟器
+- 远程操作前，请确认 PC 端助手在线且模拟器已连接
+- 限时活动类任务建议提前确认游戏内入口、活动时间和账号条件
+- 修改任务配置或优先级后，建议重新确认任务列表和运行状态
 
 ## 常见问题
 
-### 启动软件报错：
+### 启动软件报错
 
-若启动助手出现以下报错信息，则为缺少[Visual C++ Redistributable](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-c-redistributable-v14)运行环境，根据电脑cpu架构选择版本下载安装即可。
+若启动助手出现 `GamePal\\_internal\\maa\\bin\\MaaToolkit.dll` 相关报错，通常是缺少 [Visual C++ Redistributable](https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170#visual-c-redistributable-v14) 运行环境，请根据电脑 CPU 架构下载安装对应版本。
 
-fileNotfoundError：`GamePal\\_internal\\maa\\bin\\MaaToolkit.dll`
 ![fileNotfoundError](imags/fileNotfoundError-MaaToolkit.dll.jpg)
 
 ### 连接设备失败
-若连接模拟器出现以下报错信息，请尝试**重启软件**或**重启电脑**后重试。
 
-`连接设备失败: Device connection failed`
+若连接模拟器出现 `连接设备失败: Device connection failed`，请尝试重启软件或重启电脑后重试。
 
-> 若连接地址不是`127.0.0.1:xxxx`，则需要将模拟器的网络桥接模式关闭后再次尝试连接。
+> 若连接地址不是 `127.0.0.1:xxxx`，请先关闭模拟器的网络桥接模式再重新连接。
 
 ![连接设备失败 Device connection failed.png](imags/%E8%BF%9E%E6%8E%A5%E8%AE%BE%E5%A4%87%E5%A4%B1%E8%B4%A5%20Device%20connection%20failed.png)
+
 ### 运行任务时出现乱点情况
 
-请确认模拟器分辨率为**手机**分辨率，**720*1280**、**1080*1920**均可。
+请确认模拟器分辨率为手机分辨率，`720*1280` 或 `1080*1920` 均可。
 
-### 新区30级后灯塔情报无法识别到野兽情报
+### APP 无法查看 PC 端状态
 
-这是因为区服的`战争学院`没有解锁，软件前期默认30级以后野兽情报为`5爪野兽`，即解锁`战争学院`后的野兽。为了避免老用户大量修改配置，目前继续沿用默认已解锁的状态。
+请确认 PC 端助手已启动、账号已连接或绑定，并检查网络是否正常。若 PC 端处于离线状态，APP 无法获取实时任务状态。
 
-解决办法：按照修改配置的方式，将`warCollegeUnlocked`改为`false`即可。
+### APP 下发任务后没有执行
 
+请确认 PC 端已连接模拟器，游戏处于可执行任务的页面，且当前没有其他高优先级任务正在运行。
+
+### 任务长时间无响应
+
+请先查看任务日志，再确认模拟器画面是否卡住、游戏是否掉线、分辨率是否正确。必要时可停止任务并重新连接模拟器。
+
+### 新区 30 级后灯塔情报无法识别到野兽情报
+
+请确认当前区服的战争学院是否已经解锁。若未解锁，请等待游戏内条件满足后再使用该任务。
